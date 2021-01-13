@@ -29,6 +29,7 @@ while (guessLeft && guess.includes('_')) {
 
 if (guess.includes('_')) {
     console.log('%c Sorry, you did not finish the Hangman.', 'background: red');
+    console.log('The word is:', w);
 } else {
     console.log('%c You win. Congrats!', 'background: green');
 }
