@@ -1,10 +1,10 @@
-let words = ['hangman', 'laborchart', 'consequences']
-let w = words[Math.round(Math.random() * (words.length - 1))]
+let words = ['hangman', 'laborchart', 'consequences', 'google', 'tesla', 'california', 'github', 'programming', 'python', 'javascript'];
+let w = words[Math.round(Math.random() * (words.length - 1))];
 let guess = [];
 for (let i = 0; i < w.length; i++) {
-    guess.push('_')
+    guess.push('_');
 }
-let guessLeft = w.length
+let guessLeft = w.length;
 console.log(guess.join(' '));
 
 while (guessLeft && guess.includes('_')) {
@@ -13,14 +13,14 @@ while (guessLeft && guess.includes('_')) {
     console.log('You guessed: ' + g);
     
     if (is_correct) {
-        console.log('%c Correct guess!', 'color: green')
+        console.log('%c Correct guess!', 'color: green');
     } else {
-        console.log('%c Wrong guess.', 'color: red')
+        console.log('%c Wrong guess.', 'color: red');
     }
 
     for (let i = 0; i < w.length; i++) {
         if (w[i] === g) {
-            guess[i] = g
+            guess[i] = g;
         }
     }
     console.log(guess.join(' '));
